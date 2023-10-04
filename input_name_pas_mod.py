@@ -1,4 +1,4 @@
-class Input_name_pas:
+class InputNamePas:
     """
     Pattern of log-in control: name, password
     ...
@@ -22,10 +22,10 @@ class Input_name_pas:
             n = input("Enter your username: ")
             p = input("Enter your password: ")
             if n == user.get("Name") and user.get("Password") == p:
-                print("\n\tWelcome to app! You can go on...\n")
+                print("\n\tWelcome to app! You can go on...")
                 break
             else:
-                print("\t\nUsername or password isn't OK!\n")
+                print("\n\tUsername or password isn't OK!\n")
 # TYPE "NAME: PASSWORD"
     def key_val():
         user = {'Marek': '1234'}
@@ -33,7 +33,13 @@ class Input_name_pas:
             n = input("Enter your username: ")
             p = input("Enter your password: ")
             if user.get(n) == p:
-                print("\n\tWelcome to app! You can go on...\n")
+                print("\n\tWelcome to app! You can go on...")
                 break
             else:
-                print("\t\nUsername or password isn't OK!\n")
+                print("\n\tUsername or password isn't OK!\n")
+
+
+#import input_name_pas_mod as inputnp
+#help(inputnp)
+#inputnp.InputNamePas.key_key()
+#inputnp.InputNamePas.key_val()
