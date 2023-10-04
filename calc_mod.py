@@ -104,3 +104,16 @@ class Calc:
     def expon(x, n):
         print(f"\t{x} ^ {n} = {pow(x, n)}\n")
         return pow(x, n)
+
+
+#import calc_mod as calc
+#help(calc)
+#print(calc.Calc.plus(*x))
+#print(calc.Calc.minus(*x))
+#print(calc.Calc.mult(*x))
+#print(calc.Calc.divis(*x))
+#print(calc.Calc.expon(y, n))
+#print(calc.Calc.classic_input())
+#x = calc.Calc.plus(1, 2, 3, 4, 5)
+#x = calc.Calc.classic_input()
+#print(x)
