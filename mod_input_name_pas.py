@@ -39,7 +39,7 @@ class InputNamePas:
                 print("\n\tUsername or password isn't OK!\n")
 
 
-#import input_name_pas_mod as inputnp
+#import mod_input_name_pas as inputnp
 #help(inputnp)
 #inputnp.InputNamePas.key_key()
 #inputnp.InputNamePas.key_val()

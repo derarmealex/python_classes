@@ -106,7 +106,7 @@ class Calc:
         return pow(x, n)
 
 
-#import calc_mod as calc
+#import mod_calc as calc
 #help(calc)
 #print(calc.Calc.plus(*x))
 #print(calc.Calc.minus(*x))
