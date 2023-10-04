@@ -8,7 +8,8 @@ class Calc:
         classic step-by-step input of two numbers
         and operator between them to calculate.
         Returned number (number 1) can be calculated right away
-        with new input data: number 2 and operator
+        with new input data: number 2 and operator,
+        or just taken without further calculating
     plus(x):
         return sum of entered numbers or collection
     minus(x):
@@ -38,7 +39,7 @@ class Calc:
                 '\tYour expression to process now:', num1
             )
             oper = input("Choose the operation    : "
-                "\nor enter 'stop' to stop calculating and take result: ").strip().lower()
+                "\nor enter 'stop' to stop calculating and taking result: ").strip().lower()
             if oper != "stop":
                 try:
                     num2 = float(input("Enter your second number: "))
@@ -49,26 +50,21 @@ class Calc:
                     case "+":
                         summ_num1_num2 = Calc.plus(num1, num2)
                         num1 = summ_num1_num2
-                        print(f"\n\t{float(num1)} + {float(num2)} = {num1}\n")
                     case "-":
                         sub_num1_num2 = Calc.minus(num1, num2)
                         num1 = sub_num1_num2
-                        print(f"\n\t{float(num1)} - {float(num2)} = {num1}\n")
                     case "*":
                         mult_num1_num2 = Calc.mult(num1, num2)
                         num1 = mult_num1_num2
-                        print(f"\n\t{float(num1)} * {float(num2)} = {num1}\n")
                     case "/":
-                        divis_num1_num2 = Calc.divis(num1, num2)
-                        num1 = divis_num1_num2
                         try:
-                            print(f"\n\t{float(num1)} / {float(num2)} = {num1}\n")
+                            divis_num1_num2 = Calc.divis(num1, num2)
+                            num1 = divis_num1_num2
                         except ZeroDivisionError:
                             print("\n\tCouldn't be divided by 0! Enter a correct number\n")
                     case "^":
                         expon_num1_num2 = Calc.expon(num1, num2)
                         num1 = expon_num1_num2
-                        print(f"\n\t{float(num1)} ^ {float(num2)} = {num1}\n")
                     case _:
                         print(f"\n\tWrong operator selected! --> ({oper}) <-- Try again\n")
             else:
@@ -78,18 +74,13 @@ class Calc:
         exit()
 
     def plus(*x):
-#        return f"\tSum of numbers -->{x}--> is ==>({sum(x)})<==\n"
+        print(f"\tSum of numbers -->{x}--> is ==>({sum(x)})<==\n")
         return sum(x)
-
-#    def __init__(self, *x):
-#        self.x = x
 
     def minus(*x):
         x = [-x for x in x]
-# [-1, -2, 3, -4, 5]
         x[0] = -x[0]
-# [1, -2, 3, -4, 5]
-#        return f"\tDifference of numbers -->{x}--> is ==>({sum(x)})<==\n"
+        print(f"\tAbsolute sum of numbers -->{x}--> is ==>({sum(x)})<==\n")
         return sum(x)
 
     def mult(*x):
@@ -98,7 +89,7 @@ class Calc:
         while i < len(x) - 1:
             num = num * x[i + 1]
             i += 1
-#        return f"\tProduct of numbers -->{x}--> is ==>({num})<==\n"
+        print(f"\tProduct of numbers -->{x}--> is ==>({num})<==\n")
         return num
 
     def divis(*x):
@@ -107,21 +98,10 @@ class Calc:
         while i < len(x) - 1:
             num = num / x[i + 1]
             i += 1
-#        return f"\tQuotient of numbers -->{x}--> is ==>({num})<==\n"
+        print(f"\tQuotient of numbers -->{x}--> is ==>({num})<==\n")
         return num
 
     def expon(x, n):
         num = pow(x, n)
-#        return f"\t{n} ** {x} = {num}\n"
+        print(f"\t{n} ^ {x} = {num}\n")
         return num
-
-#print(Calc.plus(1, 2, -3, 4, -5))
-# Sum of numbers -->(1, 2, -3, 4, -5)--> is ==>(-1)<==
-#print(Calc.minus(1, 2, -3, 4, -5))
-# Difference of numbers -->[1, -2, 3, -4, 5]--> is ==>(3)<==
-#print(Calc.mult(1, 2, -3, 4, -5))
-# Product of numbers -->(1, 2, -3, 4, -5)--> is ==>(120)<==
-#print(Calc.divis(1, 2, -3, 4, -5))
-# Quotient of numbers -->(1, 2, -3, 4, -5)--> is ==>(0.008333333333333333)<==
-#print(Calc.expon(2, -3))
-# -3 ** 2 = 0.125
