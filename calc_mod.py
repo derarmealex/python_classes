@@ -8,8 +8,8 @@ class Calc:
         classic step-by-step input of two numbers
         and operator between them to calculate.
         Returned number (number 1) can be calculated right away
-        with new input data: number 2 and operator,
-        or just taken without further calculating
+        with new input data: new number 2 and operator,
+        or just taken (returned) without further calculating
     plus(x):
         return sum of entered numbers or collection
     minus(x):
@@ -61,7 +61,7 @@ class Calc:
                             divis_num1_num2 = Calc.divis(num1, num2)
                             num1 = divis_num1_num2
                         except ZeroDivisionError:
-                            print("\n\tCouldn't be divided by 0! Enter a correct number\n")
+                            print("\n\tCouldn't be divided by 0! Enter a correct divisor\n")
                     case "^":
                         expon_num1_num2 = Calc.expon(num1, num2)
                         num1 = expon_num1_num2
@@ -87,7 +87,7 @@ class Calc:
         num = x[0]
         i = 0
         while i < len(x) - 1:
-            num = num * x[i + 1]
+            num *= x[i + 1]
             i += 1
         print(f"\tProduct of numbers -->{x}--> is ==>({num})<==\n")
         return num
@@ -96,12 +96,11 @@ class Calc:
         num = x[0]
         i = 0
         while i < len(x) - 1:
-            num = num / x[i + 1]
+            num /= x[i + 1]
             i += 1
         print(f"\tQuotient of numbers -->{x}--> is ==>({num})<==\n")
         return num
 
     def expon(x, n):
-        num = pow(x, n)
-        print(f"\t{n} ^ {x} = {num}\n")
-        return num
+        print(f"\t{x} ^ {n} = {pow(x, n)}\n")
+        return pow(x, n)
