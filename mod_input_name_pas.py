@@ -4,12 +4,12 @@ class InputNamePas:
     ...
     Methods
     -------
-    key_key(name, pas):
+    key_key():
         Compare user's input of username and password
         with those stored in internal dictionary -
         - if name and password are stored separately
         {Name="x", Password="y"}
-    key_val(name, pas):
+    key_val():
         Compare user's input of username and password
         with those stored in internal dictionary -
         - if name and password are stored together
