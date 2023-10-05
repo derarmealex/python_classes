@@ -4,7 +4,8 @@ class Extract:
     You should have variable as:
     x = extract.Extract.vals_dct_in_dct(dct)
     then use ==> [print]next(x) <==
-    to return every next element of sequence
+    to return every next element of sequence,
+    or just use [print](x) to return sequence
     ...
     Methods
     -------
