@@ -10,7 +10,7 @@ class Extract:
         Extract all values from dictionary
     vals_dct_in_dct(dct):
         Extract all values from immersed dictionary
-        that stored with keys matched to key_word
+        which stored with keys matched to key_word
     """
     def keys_dct(dct):
         for key in dct:
