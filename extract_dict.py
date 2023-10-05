@@ -1,6 +1,10 @@
 class Extract:
     """
     Extract elements from dictionary
+    You should have variable as:
+    x = extract.Extract.vals_dct_in_dct(dct)
+    then use ==> [print]next(x) <==
+    to return every next element of sequence
     ...
     Methods
     -------

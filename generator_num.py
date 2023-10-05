@@ -5,8 +5,7 @@ class NumGenSearch:
     You should have variable as:
     x = mod_generator.NumGenSearch.find_odd(seq)
     then use ==> [print]next(x) <==
-    to return every next element of sequence,
-    or use res_output(seq) method here.
+    to return every next element of sequence
     ...
     Methods
     -------
