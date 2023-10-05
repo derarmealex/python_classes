@@ -16,9 +16,6 @@ class NumGenSearch:
         extract odd numbers from given sequence
     find_even(seq):
         extract even numbers from given sequence
-    res_output(seq):
-        return all at once yielded elements of generator
-        collected (filtered) from given sequence
     """
 
     def find_prime(seq):
@@ -45,17 +42,16 @@ class NumGenSearch:
             if num % 2 == 0:
                 yield num
 
-    def res_output(seq):
-        while True:
-            try:
-                print(next(x))
-            except StopIteration:
-                print("Stop iteration: that was the last element")
-                break
 
-
-#import generator as gen
+#import num_generator as gen
 #help(gen)
 #lst = [1, 2, 3, 4, 17, 47, 50, 90, 101, 0]
-#x = NumGenSearch.find_prime(lst)
-#NumGenSearch.res_output(x)
+#x = gen.NumGenSearch.find_prime(lst)
+#print(list(x))                             # [2, 3, 17, 47, 101]
+# or
+#print(next(x))                             # 2
+#print(next(x))                             # 3
+#print(next(x))                             # 17
+#print(next(x))                             # 47
+#print(next(x))                             # 101
+#print(next(x))                             # StopIteration
