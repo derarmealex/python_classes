@@ -45,13 +45,15 @@ class NumGenSearch:
 
 #import generator_num as gen
 #help(gen)
+
 #lst = [1, 2, 3, 4, 17, 47, 50, 90, 101, 0]
-#x = gen.NumGenSearch.find_prime(lst)
-#print(list(x))                             # [2, 3, 17, 47, 101]
+#fin_lst = gen.NumGenSearch.find_prime(lst)
+
+#print(list(fin_lst))                               # [2, 3, 17, 47, 101]
 # or
-#print(next(x))                             # 2
-#print(next(x))                             # 3
-#print(next(x))                             # 17
-#print(next(x))                             # 47
-#print(next(x))                             # 101
-#print(next(x))                             # StopIteration
+#print(next(fin_lst))                               # 2
+#print(next(fin_lst))                               # 3
+#print(next(fin_lst))                               # 17
+#print(next(fin_lst))                               # 47
+#print(next(fin_lst))                               # 101
+#print(next(fin_lst))                               # StopIteration

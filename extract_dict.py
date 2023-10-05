@@ -13,10 +13,12 @@ class Extract:
         which stored with keys matched to key_word
     """
     def keys_dct(dct):
+        dct = list(dct)
         for key in dct:
             yield key
 
     def vals_dct(dct):
+        dct = dct.values()
         for val in dct:
             yield val
 
@@ -34,7 +36,8 @@ class Extract:
 
 # SIMPLE DICTIONARY - KEYS
 #dct = {'Name': 'Marek', 'Surname': 'Parek', 'Email': 'marek.parek@gmail.com'}
-#fin_lst = extract.Extract.keys_dct(list(dct))
+#fin_lst = Extract.keys_dct(dct)
+
 #print(list(fin_lst))                                   # ['Name', 'Surname', 'Email']
 # or
 #print(next(fin_lst))                                   # Name
@@ -44,8 +47,8 @@ class Extract:
 
 # SIMPLE DICTIONARY - VALUES
 #dct = {'Name': 'Marek', 'Surname': 'Parek', 'Email': 'marek.parek@gmail.com'}
-#dct = dct.values()
 #fin_lst = extract.Extract.vals_dct(dct)
+
 #print(list(fin_lst))                                   # ['Marek', 'Parek', 'marek.parek@gmail.com']
 # or
 #print(next(fin_lst))                                   # Marek
