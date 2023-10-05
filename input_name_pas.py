@@ -39,8 +39,8 @@ class InNamePas:
                 print("\n\tUsername or password isn't OK!\n")
 
 
-#import input_name_pas as innp
+#import input_name_pas as inp
 #help(innp)
 
-#inputnp.InNamePas.key_key()
-#inputnp.InNamePas.key_val()
+#inp.InNamePas.key_key()
+#inp.InNamePas.key_val()

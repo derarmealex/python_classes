@@ -42,7 +42,7 @@ class Extract:
 
 # SIMPLE DICTIONARY - KEYS
 #dct = {'Name': 'Marek', 'Surname': 'Parek', 'Email': 'marek.parek@gmail.com'}
-#fin_lst = Extract.keys_dct(dct)
+#fin_lst = extract.Extract.keys_dct(dct)
 
 #print(list(fin_lst))                                   # ['Name', 'Surname', 'Email']
 # or
