@@ -1,4 +1,4 @@
-class InputNamePas:
+class InNamePas:
     """
     Pattern of log-in control: name, password
     ...
@@ -39,7 +39,7 @@ class InputNamePas:
                 print("\n\tUsername or password isn't OK!\n")
 
 
-#import mod_input_name_pas as inputnp
-#help(inputnp)
-#inputnp.InputNamePas.key_key()
-#inputnp.InputNamePas.key_val()
+#import input_name_pas as innp
+#help(innp)
+#inputnp.InNamePas.key_key()
+#inputnp.InNamePas.key_val()
