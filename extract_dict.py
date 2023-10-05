@@ -1,6 +1,6 @@
 class Extract:
     """
-    Extraction elements from dictionary
+    Extractor elements from dictionary
     ...
     Methods
     -------
