@@ -18,7 +18,6 @@ class NumGenSearch:
     find_even(seq):
         extract even numbers from given sequence
     """
-
     def find_prime(seq):
         for num in seq:
             if num > 1:
