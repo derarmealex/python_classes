@@ -4,8 +4,8 @@ class NumberGeneratorSearcher:
     or finder specific numbers in existing collection.
     You should have variable as:
     x = mod_generator.NumberGeneratorSearcher.find_odd(seq)
-    then use ==> print(next(x)) <==
-    for return every next element of sequence
+    then use ==> [print]next(x) <==
+    to return every next element of sequence
     ...
     Methods
     -------

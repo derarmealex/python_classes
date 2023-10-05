@@ -9,7 +9,7 @@ class Calc:
         and operator between them to calculate.
         Returned number (number 1) can be calculated right away
         with new input data: new number 2 and operator,
-        or just taken (returned) without further calculating
+        or just returned without further calculating
     plus(x):
         return sum of entered numbers or collection
     minus(x):
@@ -34,7 +34,7 @@ class Calc:
                 'Subtraction:          "-"\n'
                 'Multiplication:       "*"\n'
                 'Division:             "/"\n'
-                'Exponentiation:       "^"\n'
+                'Exponent:             "^"\n'
                 '-------------------------\n'
                 '\tYour expression to process now:', num1
             )
@@ -61,7 +61,7 @@ class Calc:
                             divis_num1_num2 = Calc.divis(num1, num2)
                             num1 = divis_num1_num2
                         except ZeroDivisionError:
-                            print("\n\tCouldn't be divided by 0! Enter a correct divisor\n")
+                            print("\n\tCouldn't be divided by 0. Correct divisor needed\n")
                     case "^":
                         expon_num1_num2 = Calc.expon(num1, num2)
                         num1 = expon_num1_num2
@@ -74,13 +74,13 @@ class Calc:
         exit()
 
     def plus(*x):
-        print(f"\tSum of numbers -->{x}--> is ==>({sum(x)})<==\n")
+        print(f"\tSum of numbers -->{x}<-- is ==>({sum(x)})<==\n")
         return sum(x)
 
     def minus(*x):
         x = [-x for x in x]
         x[0] = -x[0]
-        print(f"\tAbsolute sum of numbers -->{x}--> is ==>({sum(x)})<==\n")
+        print(f"\tAbsolute sum of numbers -->{x}<-- is ==>({sum(x)})<==\n")
         return sum(x)
 
     def mult(*x):
@@ -89,7 +89,7 @@ class Calc:
         while i < len(x) - 1:
             num *= x[i + 1]
             i += 1
-        print(f"\tProduct of numbers -->{x}--> is ==>({num})<==\n")
+        print(f"\tProduct of numbers -->{x}<-- is ==>({num})<==\n")
         return num
 
     def divis(*x):
@@ -98,7 +98,7 @@ class Calc:
         while i < len(x) - 1:
             num /= x[i + 1]
             i += 1
-        print(f"\tQuotient of numbers -->{x}--> is ==>({num})<==\n")
+        print(f"\tQuotient of numbers -->{x}<-- is ==>({num})<==\n")
         return num
 
     def expon(x, n):
