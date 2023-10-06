@@ -41,10 +41,9 @@ class InNamePas:
                 print("\n\tUsername or password isn't OK!\n")
 
 
-inp = InNamePas()
-
 #import input_name_pas as inp
 #help(inp)
+#inp = InNamePas()
 
 #inp.inp.text = ("\n\tWelcome to app! You can go on...\n")
 #inp.inp.key_key()

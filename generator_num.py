@@ -43,10 +43,9 @@ class NumGenSearch:
                 yield num
 
 
-gen = NumGenSearch()
-
 #import generator_num as gen
 #help(gen)
+#gen = NumGenSearch()
 
 #lst = [1, 2, 3, 4, 17, 47, 50, 90, 101, 0]
 #fin_lst = gen.gen.find_prime(lst)

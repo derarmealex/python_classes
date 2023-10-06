@@ -37,10 +37,9 @@ class Extract:
                     yield item[key]
 
 
-extract = Extract()
-
 #import extract_dict as extract
 #help(extract)
+#extract = Extract()
 
 # SIMPLE DICTIONARY - KEYS
 #dct = {'Name': 'Marek', 'Surname': 'Parek', 'Email': 'marek.parek@gmail.com'}

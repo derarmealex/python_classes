@@ -60,10 +60,9 @@ class Order:
         return final                                # [18, 10, 3, 1, 0, -2, -8]
 
 
-ordering = Order()
-
 #import ordering
 #help(order)
+#ordering = Order()
 
 #stg = " 0, -2,10,  1, -8,18, 3  "
 #print(ordering.ordering.org_stg_stg_up(stg))

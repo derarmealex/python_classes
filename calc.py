@@ -108,10 +108,9 @@ class Calc:
         return pow(y, n)
 
 
-calc = Calc()
-
 #import calc
 #help(calc)
+#calc = Calc()
 
 #x = (-1, 2, -3, 4, -5)
 #print(calc.calc.plus(*x))
