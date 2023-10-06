@@ -3,7 +3,7 @@ class Extract:
     Extract elements from dictionary
     OUTPUT:
     You should have variable as:
-    x = extract.extract.vals_dct_in_dct(dct)
+    x = extract.extract.vals_dct_in_dct()
     then use ==> [print]next(x) <==
     to return every next element of sequence,
     or just use [print](x) to return sequence
@@ -14,7 +14,7 @@ class Extract:
         Extract all keys from dictionary
     def vals_dct(dct):
         Extract all values from dictionary
-    vals_dct_in_dct(dct):
+    vals_dct_in_dct(dct, key_word):
         Extract all values from immersed dictionary
         which stored with keys matched to key_word
     """
@@ -28,13 +28,13 @@ class Extract:
         for val in dct:
             yield val
 
-    def vals_dct_in_dct(self, dct):
+    def vals_dct_in_dct(self, dct, key_word):
         vals = list(dct.values())
 # [{'Name': 'Marek', 'Surname': 'Parek', 'Email': 'marek.parek@gmail.com'}, {'Name': 'Matous' ...
         for item in vals:
-            for key_word in item:
-                if key_word == "Email":
-                    yield item[key_word]
+            for key in item:
+                if key == key_word:
+                    yield item[key]
 
 
 extract = Extract()
@@ -73,7 +73,7 @@ extract = Extract()
 # 'employee04': {'Name': 'Alex', 'Surname': 'Brown', 'Email': 'alex.brown@rhosgobel.com'}
 #            }
 #key_word = "Email"
-#fin_lst = extract.extract.vals_dct_in_dct(dct)
+#fin_lst = extract.extract.vals_dct_in_dct(dct, key_word)
 #print(list(fin_lst))
 # ['marek.parek@gmail.com', 'matous.svatous@gmail.com', 'anna.rana@gmail.com', 'alex.brown@rhosgobel.com']
 # or
