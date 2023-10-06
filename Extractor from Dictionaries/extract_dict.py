@@ -3,7 +3,7 @@ class Extract:
     Extract elements from dictionary
     OUTPUT:
     You should have variable as:
-    x = extract.extract.vals_dct_in_dct()
+    x = extract.Extract.vals_dct_in_dct()
     then use ==> [print]next(x) <==
     to return every next element of sequence,
     or just use [print](x) to return sequence

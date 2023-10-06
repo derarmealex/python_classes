@@ -4,22 +4,22 @@ class NumGenSearch:
     or finder specific numbers in existing collection.
     OUTPUT:
     You should have variable as:
-    x = mod_generator.NumGenSearch.find_odd()
+    x = generator_nums.NumGenSearch.find_odd()
     then use ==> [print]next(x) <==
     to return every next element of sequence,
     or just use [print](x) to return sequence
     ...
     Methods
     -------
-    find_prime(seq):
+    find_prime(lst):
         extract prime numbers from given sequence
-    find_odd(seq):
+    find_odd(lst):
         extract odd numbers from given sequence
-    find_even(seq):
+    find_even(lst):
         extract even numbers from given sequence
     """
-    def find_prime(self, seq):
-        for num in seq:
+    def find_prime(self, lst):
+        for num in lst:
             if num > 1:
                 ctr_num = 2
                 while ctr_num < num:
@@ -32,12 +32,12 @@ class NumGenSearch:
             else:
                 continue
 
-    def find_odd(self, seq):
-        for num in seq:
+    def find_odd(self, lst):
+        for num in lst:
             if num % 2 != 0:
                 yield num
 
-    def find_even(self, seq):
-        for num in seq:
+    def find_even(self, lst):
+        for num in lst:
             if num % 2 == 0:
                 yield num

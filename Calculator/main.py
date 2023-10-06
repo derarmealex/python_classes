@@ -1,5 +1,5 @@
 import calc
-#help(calc)
+#help(Calculator)
 
 calc = calc.Calc()
 
