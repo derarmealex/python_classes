@@ -4,7 +4,7 @@ class NumGenSearch:
     or finder specific numbers in existing collection.
     OUTPUT:
     You should have variable as:
-    x = mod_generator.NumGenSearch.find_odd(seq)
+    x = mod_generator.NumGenSearch.find_odd()
     then use ==> [print]next(x) <==
     to return every next element of sequence,
     or just use [print](x) to return sequence

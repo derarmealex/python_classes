@@ -10,15 +10,15 @@ class Calc:
         Returned number (number 1) can be calculated right away
         with new input data: new number 2 and operator,
         or just returned without further calculating
-    plus(x):
+    plus(*x):
         return sum of entered numbers or collection
-    minus(x):
+    minus(*x):
         return difference of entered numbers or collection
-    mult(x):
+    mult(*x):
         return product of entered numbers or collection
-    divis(x):
+    divis(*x):
         return quotient of entered numbers or collection
-    expon(x, n):
+    expon(y, n):
         return power of entered number and exponent
     """
     def classic_input(self):
