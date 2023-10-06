@@ -16,31 +16,37 @@ class InNamePas:
         {"Name": "Password"}
     """
 # TYPE "NAME, PASSWORD"
-    def key_key():
+    def key_key(self):
         user = dict(Name="Marek", Password="1234")
         while True:
             n = input("Enter your username: ")
             p = input("Enter your password: ")
             if n == user.get("Name") and user.get("Password") == p:
-                print("\n\tWelcome to app! You can go on...")
+#                print("\n\tWelcome to app! You can go on...\n")
+                print("{}".format(self.text))
                 break
             else:
                 print("\n\tUsername or password isn't OK!\n")
 # TYPE "NAME: PASSWORD"
-    def key_val():
+    def key_val(self):
         user = {'Marek': '1234'}
         while True:
             n = input("Enter your username: ")
             p = input("Enter your password: ")
             if user.get(n) == p:
-                print("\n\tWelcome to app! You can go on...")
+#                print("\n\tWelcome to app! You can proceed...\n")
+                print("{}".format(self.text))
                 break
             else:
                 print("\n\tUsername or password isn't OK!\n")
 
 
-#import input_name_pas as inp
-#help(innp)
+inp = InNamePas()
 
-#inp.InNamePas.key_key()
-#inp.InNamePas.key_val()
+#import input_name_pas as inp
+#help(inp)
+
+#inp.inp.text = ("\n\tWelcome to app! You can go on...\n")
+#inp.inp.key_key()
+#inp.inp.text = ("\n\tWelcome to app! You can proceed...\n")
+#inp.inp.key_val()

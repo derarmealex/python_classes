@@ -18,7 +18,7 @@ class NumGenSearch:
     find_even(seq):
         extract even numbers from given sequence
     """
-    def find_prime(seq):
+    def find_prime(self, seq):
         for num in seq:
             if num > 1:
                 ctr_num = 2
@@ -32,22 +32,24 @@ class NumGenSearch:
             else:
                 continue
 
-    def find_odd(seq):
+    def find_odd(self, seq):
         for num in seq:
             if num % 2 != 0:
                 yield num
 
-    def find_even(seq):
+    def find_even(self, seq):
         for num in seq:
             if num % 2 == 0:
                 yield num
 
 
+gen = NumGenSearch()
+
 #import generator_num as gen
 #help(gen)
 
 #lst = [1, 2, 3, 4, 17, 47, 50, 90, 101, 0]
-#fin_lst = gen.NumGenSearch.find_prime(lst)
+#fin_lst = gen.gen.find_prime(lst)
 
 #print(list(fin_lst))                               # [2, 3, 17, 47, 101]
 # or

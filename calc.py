@@ -21,7 +21,7 @@ class Calc:
     expon(x, n):
         return power of entered number and exponent
     """
-    def classic_input():
+    def classic_input(self):
         num1 = ""
         while not num1:
             try:
@@ -48,22 +48,24 @@ class Calc:
                     continue
                 match oper:
                     case "+":
-                        summ_num1_num2 = Calc.plus(num1, num2)
+                        summ_num1_num2 = Calc.plus(self, num1, num2)
                         num1 = summ_num1_num2
                     case "-":
-                        sub_num1_num2 = Calc.minus(num1, num2)
+                        sub_num1_num2 = Calc.minus(self, num1, num2)
                         num1 = sub_num1_num2
                     case "*":
-                        mult_num1_num2 = Calc.mult(num1, num2)
+                        mult_num1_num2 = Calc.mult(self, num1, num2)
                         num1 = mult_num1_num2
                     case "/":
                         try:
-                            divis_num1_num2 = Calc.divis(num1, num2)
+                            divis_num1_num2 = Calc.divis(self, num1, num2)
                             num1 = divis_num1_num2
                         except ZeroDivisionError:
                             print("\n\tCouldn't be divided by 0. Correct divisor needed\n")
                     case "^":
-                        expon_num1_num2 = Calc.expon(num1, num2)
+                        print(num1)
+                        print(num2)
+                        expon_num1_num2 = Calc.expon(self, num1, num2)
                         num1 = expon_num1_num2
                     case _:
                         print(f"\n\tWrong operator selected! --> ({oper}) <-- Try again\n")
@@ -73,17 +75,17 @@ class Calc:
                 return num1
         exit()
 
-    def plus(*x):
+    def plus(self, *x):
         print(f"\tSum of numbers -->{x}<-- is ==>({sum(x)})<==\n")
         return sum(x)
 
-    def minus(*x):
+    def minus(self, *x):
         x = [-x for x in x]
         x[0] = -x[0]
         print(f"\tAbsolute sum of numbers -->{x}<-- is ==>({sum(x)})<==\n")
         return sum(x)
 
-    def mult(*x):
+    def mult(self, *x):
         num = x[0]
         i = 0
         while i < len(x) - 1:
@@ -92,7 +94,7 @@ class Calc:
         print(f"\tProduct of numbers -->{x}<-- is ==>({num})<==\n")
         return num
 
-    def divis(*x):
+    def divis(self, *x):
         num = x[0]
         i = 0
         while i < len(x) - 1:
@@ -101,20 +103,22 @@ class Calc:
         print(f"\tQuotient of numbers -->{x}<-- is ==>({num})<==\n")
         return num
 
-    def expon(x, n):
-        print(f"\t{x} ^ {n} = {pow(x, n)}\n")
-        return pow(x, n)
+    def expon(self, y, n):
+        print(f"\t{y} ^ {n} = {pow(y, n)}\n")
+        return pow(y, n)
 
+
+calc = Calc()
 
 #import calc
 #help(calc)
 
-#print(calc.Calc.plus(*x))
-#print(calc.Calc.minus(*x))
-#print(calc.Calc.mult(*x))
-#print(calc.Calc.divis(*x))
-#print(calc.Calc.expon(y, n))
-#print(calc.Calc.classic_input())
-#x = calc.Calc.plus(1, 2, 3, 4, 5)
-#x = calc.Calc.classic_input()
-#print(x)
+#x = (-1, 2, -3, 4, -5)
+#print(calc.calc.plus(*x))
+#print(calc.calc.minus(*x))
+#print(calc.calc.mult(*x))
+#print(calc.calc.divis(*x))
+#y = 0.5
+#n = 3
+#print(calc.calc.expon(y, n))
+#print(calc.calc.classic_input())
