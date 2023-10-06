@@ -41,20 +41,3 @@ class NumGenSearch:
         for num in seq:
             if num % 2 == 0:
                 yield num
-
-
-#import generator_num as gen
-#help(gen)
-#gen = NumGenSearch()
-
-#lst = [1, 2, 3, 4, 17, 47, 50, 90, 101, 0]
-#fin_lst = gen.gen.find_prime(lst)
-
-#print(list(fin_lst))                               # [2, 3, 17, 47, 101]
-# or
-#print(next(fin_lst))                               # 2
-#print(next(fin_lst))                               # 3
-#print(next(fin_lst))                               # 17
-#print(next(fin_lst))                               # 47
-#print(next(fin_lst))                               # 101
-#print(next(fin_lst))                               # StopIteration

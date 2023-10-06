@@ -58,14 +58,3 @@ class Order:
             final.append(int(number))
         final = sorted(final)[::-1]
         return final                                # [18, 10, 3, 1, 0, -2, -8]
-
-
-#import ordering
-#help(order)
-#ordering = Order()
-
-#stg = " 0, -2,10,  1, -8,18, 3  "
-#print(ordering.ordering.org_stg_stg_up(stg))
-#print(ordering.ordering.org_stg_lst_up(stg))
-#print(ordering.ordering.org_stg_stg_down(stg))
-#print(ordering.ordering.org_stg_lst_down(stg))

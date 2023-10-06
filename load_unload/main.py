@@ -1,5 +1,5 @@
 import load_unload
-help(load_unload)
+#help(load_unload)
 
 truck = load_unload.LoadUnload()
 

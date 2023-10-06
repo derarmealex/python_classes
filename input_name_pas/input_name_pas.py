@@ -39,13 +39,3 @@ class InNamePas:
                 break
             else:
                 print("\n\tUsername or password isn't OK!\n")
-
-
-#import input_name_pas as inp
-#help(inp)
-#inp = InNamePas()
-
-#inp.inp.text = ("\n\tWelcome to app! You can go on...\n")
-#inp.inp.key_key()
-#inp.inp.text = ("\n\tWelcome to app! You can proceed...\n")
-#inp.inp.key_val()
