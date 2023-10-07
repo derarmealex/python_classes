@@ -1,6 +1,6 @@
 class StoredLogins:
     """
-    Takes user's name, [code, id], then
+    Takes user's name, (code, id), then
     login and password and stores them here
     ...
     Methods:
