@@ -3,7 +3,7 @@ class LoadUnload:
     Simulate loading/unloading goods
     ...
     Methods
-    ------------------------------------------------
+    -----------------------------------------------
     load(car_capacity):
         Control if weight of goods you want to load
         isn't too big for this car
@@ -11,6 +11,13 @@ class LoadUnload:
         Control if weight of goods on your car
         is not less than you want to unload
     """
+    def __init__(self):
+        """
+        set attributes for LoadUnload
+        ...
+        Attributes
+        ----------
+        """
     def load(self, car_capacity):
         while True:
             try:

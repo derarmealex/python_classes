@@ -3,7 +3,7 @@ class Calc:
     Homemade calculator
     ...
     Methods
-    -------
+    -----------------------------------------------------------
     classic_input():
         classic step-by-step input of two numbers
         and operator between them to calculate.
@@ -21,6 +21,13 @@ class Calc:
     expon(y, n):
         return power of entered number and exponent
     """
+    def __init__(self):
+        """
+        set attributes for Calc
+        ...
+        Attributes
+        ----------
+        """
     def classic_input(self):
         num1 = ""
         while not num1:

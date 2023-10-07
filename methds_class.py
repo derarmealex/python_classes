@@ -24,6 +24,14 @@ class Movies:
     func():
         output referential info about the movie
     """
+    name = None
+    year = 0
+    colour = None
+    director = None
+    main_actor = None
+    main_actor2 = None
+    main_actor3 = None
+
     def __init__(self, name, year, colour, director, main_actor, main_actor2='-', main_actor3='-'):
         """
         set attributes for Movies

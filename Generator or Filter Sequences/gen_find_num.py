@@ -18,6 +18,13 @@ class GenFindNum:
     find_even(lst):
         extract even numbers from given sequence
     """
+    def __init__(self):
+        """
+        set attributes for GenFindNum
+        ...
+        Attributes
+        ----------
+        """
     def find_prime(self, lst):
         for num in lst:
             if num > 1:

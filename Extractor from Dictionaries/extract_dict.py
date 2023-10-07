@@ -1,6 +1,7 @@
 class Extract:
     """
     Extract elements from dictionary
+    ...
     OUTPUT:
     You should have variable as:
     x = extract.Extract.vals_dct_in_dct()
@@ -9,7 +10,7 @@ class Extract:
     or just use [print](x) to return sequence
     ...
     Methods
-    -------
+    -----------------------------------------------
     def keys_dct(dct):
         Extract all keys from dictionary
     def vals_dct(dct):
@@ -18,6 +19,13 @@ class Extract:
         Extract all values from immersed dictionary
         which stored with keys matched to key_word
     """
+    def __init__(self):
+        """
+        set attributes for Extract
+        ...
+        Attributes
+        ----------
+        """
     def keys_dct(self, dct):
         dct = list(dct)
         for key in dct:

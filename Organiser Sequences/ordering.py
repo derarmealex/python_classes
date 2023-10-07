@@ -3,7 +3,7 @@ class Order:
     Organiser sequences
     ...
     Methods
-    -------
+    ----------------------------------------------
     org_stg_stg_up(stg):
         arrange string numbers in ASCENDING order.
         They have to be separated by commas.
@@ -21,6 +21,13 @@ class Order:
         They have to be separated by commas.
         Sorted string will be returned as LIST
     """
+    def __init__(self):
+        """
+        set attributes for Order
+        ...
+        Attributes
+        ----------
+        """
     def org_stg_stg_up(self, stg):
         split_stg = stg.split(",")                  # [' 0', ' -2', '10', '  1', ' -8', '18', ' 3  ']
         final = []

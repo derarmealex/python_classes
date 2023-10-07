@@ -9,7 +9,7 @@ print(cs)                          # <module 'clss' from 'C:\\Users\\alexa\\Desk
 print(cs.f3.func())                # 1995, La Haine, black&white, director: Mathieu Kassovitz, actors: ...
 # or
 import inspect
-print(inspect.getmodule(cs))       # <module 'class_' from 'C:\\Users\\alexa\\Desktop\\py\\python_tools\\class_.py'>
+print(inspect.getmodule(cs))       # <module 'class_' from 'C:\\Users\\alexa\\Desktop\\py\\python_tools\\class1.py'>
 
 from class_ import f1
 print(f1.func())                   # 1968, Baisers volés, colour, director: François Truffaut, actors: ...
