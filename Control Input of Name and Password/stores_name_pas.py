@@ -12,7 +12,7 @@ class StoredLogins:
     input_data_tog():
         takes user's name and log-in data,
         send them to dictionary, where stored them
-        separately, as: {'Name': {'Login': 'Password'}}
+        together, as: {'Name': {'Login': 'Password'}}
     """
     name = None
     login = None
