@@ -11,8 +11,8 @@ class StoredLogins:
         separately as: {'Login'="x", 'Password'="y"}.
     input_data_tog():
         takes user's name and log-in data,
-        send them to dictionary, where stored them
-        together, as: {'Name': {'Login': 'Password'}}
+        send them to dictionary, where stored
+        together as: {'Name': {'Login': 'Password'}}
     """
     name = None
     login = None
@@ -27,7 +27,7 @@ class StoredLogins:
 
     def input_data_sep(self, name, login, password):
         """
-        login data stores as: {'Login'="x", 'Password'="y"}
+        login data store as: {'Login'="x", 'Password'="y"}
         """
         name = dict()
         name["Login"] = login
@@ -36,13 +36,13 @@ class StoredLogins:
 
     def input_data_tog(self, login, password):
         """
-        login data stores as: {'Name': {'Login': 'Password'}}
+        login data store as: {'Name': {'Login': 'Password'}}
         """
         stored_logins_tog.update({login: password})
 
 
-stored_logins_tog = dict()
 stored_logins_sep = dict()
+stored_logins_tog = dict()
 
 user1 = StoredLogins("Radagast", "brown", "123")
 user2 = StoredLogins("Gandalf", "grey", "456")
