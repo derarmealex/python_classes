@@ -1,6 +1,6 @@
-import generator_nums
+import gen_find_num
 #help(gen)
-gen = generator_nums.NumGenSearch()
+gen = gen_find_num.GenFindNum()
 
 lst = [1, 2, 3, 4, 17, 47, 50, 90, 101, 0]
 fin_lst = gen.find_prime(lst)

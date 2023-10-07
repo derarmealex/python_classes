@@ -1,10 +1,10 @@
-class NumGenSearch:
+class GenFindNum:
     """
     Generator of various number collections,
     or finder specific numbers in existing collection.
     OUTPUT:
     You should have variable as:
-    x = generator_nums.NumGenSearch.find_odd()
+    x = gen_find_nums.GenFindNum.find_odd()
     then use ==> [print]next(x) <==
     to return every next element of sequence,
     or just use [print](x) to return sequence

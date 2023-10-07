@@ -1,6 +1,6 @@
 class Order:
     """
-    Organiser of sequences
+    Organiser sequences
     ...
     Methods
     -------
