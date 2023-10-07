@@ -1,7 +1,7 @@
 class StoredLogins:
     """
-    Takes user's name (code, id), 
-    login and password and stores them here
+    Takes user's name (code, id), login, password
+    and stores them here in dictionary
     ...
     Methods:
     ---------------------------------------------------
