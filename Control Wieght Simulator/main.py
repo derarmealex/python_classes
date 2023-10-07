@@ -1,5 +1,5 @@
 import load_unload
-#help(Control Wieght of Loading, Unloading Goods)
+#help(load_unload)
 
 truck = load_unload.LoadUnload()
 

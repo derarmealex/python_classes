@@ -1,40 +1,39 @@
 class LoadUnload:
     """
-    Simulate loading / unloading goods
+    Simulate loading/unloading goods
     ...
     Methods
     ------------------------------------------------
     load(car_capacity):
         Control if weight of goods you want to load
-        isn't too much for this car
-
+        isn't too big for this car
     unload(load):
-        Control if you have enough goods on your car
-        that you want to unload
+        Control if weight of goods on your car
+        is not less than you want to unload
     """
     def load(self, car_capacity):
         while True:
             try:
-                weight_in = int(input("Enter weight of goods to load: "))
+                weight_in = int(input("Enter weight of goods to load in kg: "))
             except ValueError:
-                print("\n\tIncorrect number! Try again\n")
+                print("\n\tInteger number (kg) expected\n")
             else:
                 if weight_in <= car_capacity:
                     return int(weight_in)
                 else:
-                    print("\n\tit's too heavy!\n")
+                    print("\n\tIt's too heavy for this car\n")
 
     def unload(self, load):
         while load > 0:
             try:
-                weight_out = int(input("Enter weight of goods to unload: "))
+                weight_out = int(input("Enter weight of goods to unload in kg: "))
             except ValueError:
-                print("\n\tIncorrect number! Try again\n")
+                print("\n\tInteger number (kg) expected\n")
                 print("\tThere's", load, "kg on car now")
             else:
                 if weight_out <= load:
                     load = load - weight_out
                 else:
-                    print("\n\tIt's not enough goods on your car!\n")
+                    print("\n\tThere's not enough goods on your car\n")
                 print("\tThere's", load, "kg on car now")
         print("\n\tUnloading finished. See ya again!")
