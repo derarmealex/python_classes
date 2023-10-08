@@ -23,7 +23,7 @@ class StoredLogins:
         self.__login = login
         self.__password = password
         StoredLogins.input_data_sep(self, name, login, password)
-        StoredLogins.input_data_tog(name, login, password)
+        StoredLogins.input_data_tog(self, login, password)
 
     def input_data_sep(self, name, login, password):
         """
