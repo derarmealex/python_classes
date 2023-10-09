@@ -1,17 +1,20 @@
 #import stores_name_pas as stores
-import stores
-import control_name_pas as ctr
-import extract_dict
+#import extract_dict
+import input_name_pas
+import stored_logins
+
 #help(stores)
 
-login = ctr.InNamePas()
-x, y = tuple(login.input_ctr())
-
-key_word = ""
-key_word2 = ""
-input_data = stores.DataStore(x, y)
-controla = input_data.r(x, y, key_word, key_word2)
-
+control = ""
+while not control:
+    log_data = input_name_pas.InNamePas()
+    login, password = tuple(log_data.input_try())
+    input_data = stored_logins.StoredLogins(login, password)
+    key_word = ""
+    key_word2 = ""
+    control = input_data.input_ctr(login, password, key_word, key_word2)
+if control: print("You're lucky")
+else: print("Just 3 tries to connect per day unfortunately. See ya tomorrow. (:")
 
 """
 dct = {

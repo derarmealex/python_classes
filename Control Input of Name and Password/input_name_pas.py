@@ -22,10 +22,10 @@ class InNamePas:
         Attributes
         ----------------------------
         """
-    def input_ctr(self):
-        name = input("Enter your username: ")
+    def input_try(self):
+        login = input("Enter your username: ")
         pas = input("Enter your password: ")
-        yield name
+        yield login
         yield pas
 
 #    def key_key(self):
