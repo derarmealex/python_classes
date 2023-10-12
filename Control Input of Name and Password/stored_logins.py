@@ -4,6 +4,8 @@ class StoredLogins:
     ...
     Methods
     --------------------------------------------
+    input_data():
+        Retrieves user log-in data to control
     input_ctr():
         Takes log-in data as pair name, password
         from user and seek for a matching pair
@@ -12,16 +14,16 @@ class StoredLogins:
     login = None
     password = None
 
-    def __init__(self, login, password):
+    def input_data(self, login, password):
         self.__login = login
         self.__password = password
 
-    def input_ctr(self, login, password):
+    def input_control(self):
         import extract_dict
         extract = extract_dict.Extract()
         extracted_logins = extract.vals_dct_in_dct(stored_logins)
         for log_pas in extracted_logins:
-            if login == log_pas[0] and password == log_pas[1]:
+            if self.__login == log_pas[0] and self.__password == log_pas[1]:
                 return log_pas
         print("\n\tUsername or password isn't OK!\n")
 

@@ -3,11 +3,21 @@ class InNamePas:
     Log-in data input: name, password
     ...
     Methods
-    -----------------------------------------------------
+    ------------------------------------------------------
     input_try():
         Retrieves log-in data as name, password from user
+    control():
+        Sends log-in data to find matches in user database
     """
-    def input_try(self):
-        login = input("Enter your username: ")
-        pas = input("Enter your password: ")
-        return login, pas
+    login = None
+    password = None
+
+    def __init__(self, login, password):
+        self.__login = login
+        self.__password = password
+
+    def return_input_try(self):
+        return self.__login, self.__password
+
+    def control(self, stores):
+        stores.input_data(self.__login, self.__password)

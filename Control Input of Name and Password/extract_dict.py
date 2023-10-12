@@ -1,9 +1,9 @@
 class Extract:
     """
-    Extract pairs login, password from
+    Extract pairs of login, password from
     internally stored login data database
     and compares every pair with
-    log-in data from user to seek for match
+    log-in data from user to seek for matching
     ...
     Methods
     -----------------------------------------------
@@ -14,8 +14,8 @@ class Extract:
     dct = None
 
     def vals_dct_in_dct(self, dct):
-        self.dct = dct
-        vals = dct.values()
+        self.__dct = dct
+        vals = self.__dct.values()
         for pair in vals:
             final = []
             for key in pair:
