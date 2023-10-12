@@ -1,12 +1,12 @@
 class Extract:
     """
-    Extract pair login, password from
+    Extract pairs login, password from
     internally stored login data database
-    and compares input log-in data
-    from user with every pair to find match
+    and compares every pair with
+    log-in data from user to seek for match
     ...
     Methods
-    ----------------------------------------------------
+    -----------------------------------------------
     vals_dct_in_dct():
         Extract all values from immersed dictionary
         as pair login, password
@@ -16,8 +16,8 @@ class Extract:
     def vals_dct_in_dct(self, dct):
         self.dct = dct
         vals = dct.values()
-        for item in vals:
+        for pair in vals:
             final = []
-            for key in item:
-                final.append(item[key])
+            for key in pair:
+                final.append(pair[key])
             yield final
