@@ -4,7 +4,7 @@ class GenFindNum:
     or finder specific numbers in existing collection.
     OUTPUT:
     You should have variable as:
-    x = gen_find_nums.GenFindNum.find_odd()
+    x = gen_find_num.GenFindNum.find_odd()
     then use ==> [print]next(x) <==
     to return every next element of sequence,
     or just use [print](x) to return sequence
@@ -18,15 +18,18 @@ class GenFindNum:
     find_even(lst):
         extract even numbers from given sequence
     """
-    def __init__(self):
+    lst = None
+
+    def __init__(self, lst):
+        self.lst = lst
         """
         set attributes for GenFindNum
         ...
         Attributes
         ----------
         """
-    def find_prime(self, lst):
-        for num in lst:
+    def find_prime(self):
+        for num in self.lst:
             if num > 1:
                 ctr_num = 2
                 while ctr_num < num:
@@ -39,12 +42,12 @@ class GenFindNum:
             else:
                 continue
 
-    def find_odd(self, lst):
-        for num in lst:
+    def find_odd(self):
+        for num in self.lst:
             if num % 2 != 0:
                 yield num
 
-    def find_even(self, lst):
-        for num in lst:
+    def find_even(self):
+        for num in self.lst:
             if num % 2 == 0:
                 yield num

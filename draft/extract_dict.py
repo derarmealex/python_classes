@@ -24,10 +24,6 @@ class Extract:
         and returned all items of every sub-dictionary
         that matched
     """
-    dct = None
-    key_word = None
-    key_word2 = None
-
     def __init__(self, dct, key_word, key_word2):
         self.dct = dct
         self.key_word = key_word
