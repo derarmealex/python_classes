@@ -15,12 +15,7 @@ class StoredLogins:
     def __init__(self, login, password):
         self.__login = login
         self.__password = password
-        """
-        set attributes for Extract
-        ...
-        Attributes
-        --------------------------
-        """
+
     def input_ctr(self, login, password):
         import extract_dict
         extract = extract_dict.Extract()
