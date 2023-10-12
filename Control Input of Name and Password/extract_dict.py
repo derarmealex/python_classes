@@ -1,6 +1,6 @@
 class Extract:
     """
-    Extract pair as pair login, password from
+    Extract pair login, password from
     internally stored login data database
     and compares input log-in data
     from user with every pair to find match
