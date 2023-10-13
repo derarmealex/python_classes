@@ -1,5 +1,5 @@
 import ordering
-#help(order)
+#help(ordering)
 
 stg = " 0, -2,10,  1, -8,18, 3  "
 order = ordering.Order(stg)

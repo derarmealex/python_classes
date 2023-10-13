@@ -1,6 +1,9 @@
 import input_name_pas
 import stored_logins
 import extract_dict
+#help(input_name_pas)
+#help(stored_logins)
+#help(extract_dict)
 
 extract = extract_dict.Extract()
 stores = stored_logins.StoredLogins()

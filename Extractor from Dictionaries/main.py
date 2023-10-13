@@ -1,5 +1,5 @@
 import extract_dict
-#help(extract)
+#help(extract_dict)
 
 # SIMPLE DICTIONARY - KEYS
 key_word = "Name"
