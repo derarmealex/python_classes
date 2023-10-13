@@ -1,37 +1,39 @@
 class LoadUnload:
     """
-    Simulate loading/unloading goods
+    Simulate loading/unloading goods on/from truck
     ...
     Methods
     -----------------------------------------------
-    load(car_capacity):
-        Control if weight of goods you want to load
+    load():
+        control if weight of goods you want to load
         isn't too big for this car
-    unload(load):
-        Control if weight of goods on your car
+    unload():
+        control if weight of goods on your car
         is not less than you want to unload
     """
-    def __init__(self):
-        """
-        set attributes for LoadUnload
-        ...
-        Attributes
-        ----------
-        """
-    def load(self, car_capacity):
-        while True:
+    truck = None
+
+    def load(self, truck):
+        self.truck = truck
+        weight_ctr = self.truck.car_capacity
+        while weight_ctr:
+            print("\tThere's", self.truck.car_capacity - weight_ctr, "kg on car now. Full capacity:", self.truck.car_capacity)
             try:
                 weight_in = int(input("Enter weight of goods to load in kg: "))
             except ValueError:
                 print("\n\tInteger number (kg) expected\n")
             else:
-                if weight_in <= car_capacity:
-                    return int(weight_in)
+                if weight_ctr - weight_in >= 0:
+                    weight_ctr -= weight_in
                 else:
                     print("\n\tIt's too heavy for this car\n")
+        print("\n\tThere's", self.truck.car_capacity - weight_ctr, "kg on car. Good drive!")
+        return self.truck.car_capacity - weight_ctr
 
     def unload(self, load):
+        print("\n\tUnloading...\n")
         while load > 0:
+            print("\tThere's", load, "kg on car now")
             try:
                 weight_out = int(input("Enter weight of goods to unload in kg: "))
             except ValueError:
@@ -39,8 +41,7 @@ class LoadUnload:
                 print("\tThere's", load, "kg on car now")
             else:
                 if weight_out <= load:
-                    load = load - weight_out
+                    load -= weight_out
                 else:
                     print("\n\tThere's not enough goods on your car\n")
-                print("\tThere's", load, "kg on car now")
         print("\n\tUnloading finished. See ya again!")

@@ -1,7 +1,10 @@
+import truck_parking
 import load_unload
+#help(truck)
 #help(load_unload)
 
-truck = load_unload.LoadUnload()
+load_unload = load_unload.LoadUnload()
+tatra = truck_parking.TruckParking("Tatra", 3000)
 
-car_capacity = 3000
-truck.unload(truck.load(car_capacity))
+load = load_unload.load(tatra)
+unload = load_unload.unload(load)

@@ -3,7 +3,7 @@ class Order:
     Organiser sequences
     ...
     Methods
-    -----------------------------------------------
+    ----------------------------------------------
     org_stg_stg_up():
         arrange string numbers in ASCENDING order.
         They have to be separated by commas.
