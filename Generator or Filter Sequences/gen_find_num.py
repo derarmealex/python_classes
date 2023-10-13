@@ -21,10 +21,10 @@ class GenFindNum:
     lst = None
 
     def __init__(self, lst):
-        self.lst = lst
+        self.__lst = lst
 
     def find_prime(self):
-        for num in self.lst:
+        for num in self.__lst:
             if num > 1:
                 ctr_num = 2
                 while ctr_num < num:
@@ -38,11 +38,11 @@ class GenFindNum:
                 continue
 
     def find_odd(self):
-        for num in self.lst:
+        for num in self.__lst:
             if num % 2 != 0:
                 yield num
 
     def find_even(self):
-        for num in self.lst:
+        for num in self.__lst:
             if num % 2 == 0:
                 yield num

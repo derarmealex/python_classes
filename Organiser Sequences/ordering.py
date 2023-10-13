@@ -24,10 +24,10 @@ class Order:
     stg = None
 
     def __init__(self, stg):
-        self.stg = stg
+        self.__stg = stg
 
     def org_stg_stg_up(self):
-        split_stg = self.stg.split(",")             # [' 0', ' -2', '10', '  1', ' -8', '18', ' 3  ']
+        split_stg = self.__stg.split(",")           # [' 0', ' -2', '10', '  1', ' -8', '18', ' 3  ']
         final = []
         for number in split_stg:
             number = number.strip()
@@ -37,7 +37,7 @@ class Order:
         return final                                # -8, -2, 0, 1, 3, 10, 18
 
     def org_stg_lst_up(self):
-        split_stg = self.stg.split(",")             # [' 0', ' -2', '10', '  1', ' -8', '18', ' 3  ']
+        split_stg = self.__stg.split(",")           # [' 0', ' -2', '10', '  1', ' -8', '18', ' 3  ']
         final = []
         for number in split_stg:
             number = number.strip()
@@ -46,7 +46,7 @@ class Order:
         return final                                # [-8, -2, 0, 1, 3, 10, 18]
 
     def org_stg_stg_down(self):
-        split_stg = self.stg.split(",")             # [' 0', ' -2', '10', '  1', ' -8', '18', ' 3  ']
+        split_stg = self.__stg.split(",")           # [' 0', ' -2', '10', '  1', ' -8', '18', ' 3  ']
         final = []
         for number in split_stg:
             number = number.strip()
@@ -56,7 +56,7 @@ class Order:
         return final                                # 18, 10, 3, 1, 0, -2, -8
 
     def org_stg_lst_down(self):
-        split_stg = self.stg.split(",")             # [' 0', ' -2', '10', '  1', ' -8', '18', ' 3  ']
+        split_stg = self.__stg.split(",")           # [' 0', ' -2', '10', '  1', ' -8', '18', ' 3  ']
         final = []
         for number in split_stg:
             number = number.strip()
