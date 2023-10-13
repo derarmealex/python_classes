@@ -10,24 +10,19 @@ class GenFindNum:
     or just use [print](x) to return sequence
     ...
     Methods
-    -------
-    find_prime(lst):
+    ---------------------------------------------
+    find_prime():
         extract prime numbers from given sequence
-    find_odd(lst):
+    find_odd():
         extract odd numbers from given sequence
-    find_even(lst):
+    find_even():
         extract even numbers from given sequence
     """
     lst = None
 
     def __init__(self, lst):
         self.lst = lst
-        """
-        set attributes for GenFindNum
-        ...
-        Attributes
-        ----------
-        """
+
     def find_prime(self):
         for num in self.lst:
             if num > 1:

@@ -28,16 +28,9 @@ class Extract:
     key_word = None
     key_word2 = None
 
-    def __init__(self, dct, key_word, key_word2):
+    def __init__(self, dct):
         self.dct = dct
-        self.key_word = key_word
-        self.key_word2 = key_word2
-        """
-        set attributes for Extract
-        ...
-        Attributes
-        --------------------------
-        """
+
     def keys_dct(self):
         dct = self.dct.keys()
         for key in dct:
@@ -59,7 +52,7 @@ class Extract:
                     final.append(item[key])
                 elif not key_word:
                     final.append(item[key])
-            yield tuple(final)
+            yield final
 
     def items_dct_in_dct(self, key_word="", key_word2=""):
         items = self.dct.items()
@@ -73,7 +66,4 @@ class Extract:
                         final.append(key[x])
                     elif not key_word:
                         final.append(key[x])
-            yield item[0], tuple(final)
-
-    def __dict__(self):
-        return f"The dictionary: {self.dct}"
+            yield item[0], final

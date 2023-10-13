@@ -18,9 +18,7 @@ class StoredLogins:
         self.__login = login
         self.__password = password
 
-    def input_control(self):
-        import extract_dict
-        extract = extract_dict.Extract()
+    def input_control(self, extract):
         extracted_logins = extract.vals_dct_in_dct(stored_logins)
         for log_pas in extracted_logins:
             if self.__login == log_pas[0] and self.__password == log_pas[1]:
