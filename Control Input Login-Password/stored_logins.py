@@ -5,9 +5,9 @@ class StoredLogins:
     Methods
     --------------------------------------------
     input_data():
-        Retrieves user log-in data to control
+        Retrieve user log-in data to control
     input_ctr():
-        Takes log-in data as pair name, password
+        Take log-in data as pair name, password
         from user and seek for a matching pair
         in internally stored login data database
     """

@@ -3,11 +3,11 @@ class InNamePas:
     Log-in data input: name, password
     ...
     Methods
-    ------------------------------------------------------
+    -----------------------------------------------------
     input_try():
-        Retrieves log-in data as name, password from user
+        Retrieve log-in data as name, password from user
     control():
-        Sends log-in data to find matches in user database
+        Send log-in data to find matches in user database
     """
     login = None
     password = None
