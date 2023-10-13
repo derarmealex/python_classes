@@ -24,15 +24,17 @@ class Movies:
     func():
         output referential info about the movie
     """
-    name = None
-    year = 0
-    colour = None
-    director = None
-    main_actor = None
-    main_actor2 = None
-    main_actor3 = None
+#    name = None
+#    year = 0
+#    colour = None
+#    director = None
+#    main_actor = None
+#    main_actor2 = None
+#    main_actor3 = None
 
-    def __init__(self, name, year, colour, director, main_actor, main_actor2='-', main_actor3='-'):
+#    __slots__ = ["name", "year", "colour", "director", "main_actor", "main_actor2", "main_actor3"]
+
+    def __init__(self, name="-", year="-", colour="-", director="-", main_actor="-", main_actor2="-", main_actor3="-"):
         """
         set attributes for Movies
         ...
@@ -76,23 +78,29 @@ f2 = Movies('Het verloren paradijs', 1978, 'colour', 'Harry Kümel', 'Hugo Van D
 f3 = Movies('La Haine', 1995, 'black&white', 'Mathieu Kassovitz', 'Vincent Cassel', 'Saïd Taghmaoui', 'Hubert Kounde')
 
 if __name__ == "__main__":
-    #print(Movies.__doc__)                                            # film library...
-    #help(Movies)                                                     # film library...
-    #print(func.__doc__)                                              # NameError
-    #print(f2.director)
-    #print(f3.colour)
-    #print(f2.main_actor3)
-    #print(f2.main_actor2)
-    #print(Movies)
-    #print(Movies('year', 'c', 'director', 'main_actor', 'name'))
-    #print(f3.main_actor3)
-    f3.main_actor3 = 'Hubert Koundé'
-    #del f3.main_actor3
-    #del f3
-    print(f3.func())
-    print(Movies.func(f3))
-    #print(f1.func())
-    #print(dir(f1))
-    #print(f3.colour)
-    #print(dir(Movies))
-    print(type(f1))
+
+    Movies.main_actor4 = "-"                                        # AttributeError
+    print(Movies.main_actor4)                                       # -
+#    f3 = Movies('La Haine', 1995, 'black&white', 'Mathieu Kassovitz', 'Vincent Cassel', 'Saïd Taghmaoui', 'Hubert Kounde', 'bibi')
+# TypeError
+#    print(f3.func())
+#    print(Movies.__doc__)                                           # film library...
+#    help(Movies)                                                    # film library...
+#    print(func.__doc__)                                             # NameError
+#    print(f2.director)
+#    print(f3.colour)
+#    print(f2.main_actor3)
+#    print(f2.main_actor2)
+#    print(Movies)
+#    print(Movies('year', 'c', 'director', 'main_actor', 'name'))
+#    print(f3.main_actor3)
+#    f3.main_actor3 = 'Hubert Koundé'
+#    del f3.main_actor3
+#    del f3
+#    print(f3.func())
+#    print(Movies.func(f3))
+#    print(f1.func())
+#    print(dir(f1))
+#    print(f3.colour)
+#    print(dir(Movies))
+#    print(type(f1))
