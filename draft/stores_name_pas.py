@@ -1,16 +1,16 @@
 class StoredLogins:
     """
-    Takes user's name (code, id), login, password
+    Take user's name (code, id), login, password
     and stores them here in dictionary
     ...
     Methods:
-    ---------------------------------------------------
+    ------------------------------------------------
     input_data_sep():
-        takes user's name and log-in data,
+        take user's name and log-in data,
         send them to dictionary, where stored
-        separately as: {'Login'="x", 'Password'="y"}.
+        separately as: {'Login'="x", 'Password'="y"}
     input_data_tog():
-        takes user's name and log-in data,
+        take user's name and log-in data,
         send them to dictionary, where stored
         together as: {'Name': {'Login': 'Password'}}
     """
@@ -19,7 +19,7 @@ class StoredLogins:
     password = None
 
     def __init__(self, name, login, password):
-        self._name = name
+        self.__name = name
         self.__login = login
         self.__password = password
         StoredLogins.input_data_sep(self, name, login, password)
@@ -32,7 +32,7 @@ class StoredLogins:
         name = dict()
         name["Login"] = login
         name["Password"] = password
-        stored_logins_sep[self._name] = name
+        stored_logins_sep[self.__name] = name
 
     def input_data_tog(self, login, password):
         """

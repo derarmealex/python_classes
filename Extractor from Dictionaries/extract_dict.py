@@ -12,14 +12,14 @@ class Extract:
     Methods
     ----------------------------------------------------
     keys_dct():
-        Extract all keys from dictionary
+        extract all keys from dictionary
     vals_dct():
-        Extract all values from dictionary
+        extract all values from dictionary
     vals_dct_in_dct():
-        Extract all values from immersed dictionary
+        extract all values from immersed dictionary
         which is stored with keys matched to key_word(s)
     items_dct_in_dct():
-        Extract all items from immersed dictionary
+        extract all items from immersed dictionary
         which is stored with keys matched to key_word(s)
         and returned all items of every sub-dictionary
         that matched

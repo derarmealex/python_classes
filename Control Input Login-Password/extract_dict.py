@@ -1,6 +1,6 @@
 class Extract:
     """
-    Extract pairs of login, password from
+    extract pairs of login, password from
     internally stored login data database
     and compares every pair with
     log-in data from user to seek for matching
@@ -8,7 +8,7 @@ class Extract:
     Methods
     -----------------------------------------------
     vals_dct_in_dct():
-        Extract all values from immersed dictionary
+        extract all values from immersed dictionary
         as pair login, password
     """
     dct = None
