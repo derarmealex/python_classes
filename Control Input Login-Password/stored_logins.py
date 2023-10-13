@@ -1,22 +1,28 @@
 class StoredLogins:
     """
-    Log-in data control: name, password
+    Retrieve and control log-in data
+    as pair name, password
     ...
     Methods
-    --------------------------------------------
-    input_data():
+    ---------------------------------------------
+    __init__():
         retrieve user log-in data to control
-    input_ctr():
+    return_input_try():
+        return user login and password as entered
+    input_control():
         take log-in data as pair name, password
-        from user and seek for a matching pair
+        from user and seek for matching pair
         in internally stored login data database
     """
     login = None
     password = None
 
-    def input_data(self, login, password):
+    def __init__(self, login, password):
         self.__login = login
         self.__password = password
+
+    def return_input_try(self):
+        return self.__login, self.__password
 
     def input_control(self, extract):
         extracted_logins = extract.vals_dct_in_dct(stored_logins)
