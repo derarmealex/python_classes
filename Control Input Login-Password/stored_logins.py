@@ -1,39 +1,42 @@
-class StoredLogins:
+class Storage:
     """
-    Retrieve and control log-in data
-    as pair name, password
+    Takes user's name (code, id), login, password
+    and stores them here as dictionary
     ...
-    Methods
-    ---------------------------------------------
-    __init__():
-        retrieve user log-in data to control
-    return_input_try():
-        return user login and password as entered
-    input_control():
-        take log-in data as pair name, password
-        from user and seek for matching pair
-        in internally stored login data database
+    Methods:
+    -------------------------------------------------
+    safe_data():
+        takes user's name and log-in data, and stores
+        them as dictionary:
+        {'Name': {'Login': "x", 'Password': "y"}}
     """
     login = None
     password = None
+    name = None
 
-    def __init__(self, login, password):
+    __slots__ = ["__name", "__login", "__password"]
+
+    def __init__(self, name, login, password):
+        self.__name = name
         self.__login = login
         self.__password = password
+        Storage.safe_data(self)
 
-    def return_input_try(self):
-        return self.__login, self.__password
+    def safe_data(self):
+        name = dict()
+        name["Login"] = self.__login
+        name["Password"] = self.__password
+        login_database[self.__name] = name
 
-    def input_control(self, extract):
-        extracted_logins = extract.vals_dct_in_dct(stored_logins)
-        for log_pas in extracted_logins:
-            if self.__login == log_pas[0] and self.__password == log_pas[1]:
-                return log_pas
-        print("\n\tUsername or password isn't OK!\n")
+    def database(self):
+        return login_database
+
+    def __str__(self):
+        return f"{self.__name} saved!"
 
 
-stored_logins = {
-        'Radagast': {'Login': 'brown', 'Password': '123'},
-        'Gandalf': {'Login': 'grey', 'Password': '456'},
-        'Saruman': {'Login': 'white', 'Password': '789'}
-                }
+login_database = dict()
+
+# {'Radagast': {'Login': 'brown', 'Password': '123'},
+# 'Gandalf': {'Login': 'grey', 'Password': '456'},
+# 'Saruman': {'Login': 'white', 'Password': '789'}}

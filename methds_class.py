@@ -57,7 +57,7 @@ class Movies:
         """
         self.colour = colour
         self.name = name
-        self.year = year
+        self.__year = year
         self.director = director
         self.main_actor = main_actor
         self.main_actor2 = main_actor2
@@ -70,7 +70,7 @@ class Movies:
         output referential info about the movie
         if there's no more than one main actor, print '-' instead of the names
         """
-        return f'{self.year}, {self.name}, {self.colour}, director: {self.director}, actors: {self.main_actor}, {self.main_actor2}, {self.main_actor3}'
+        return f'{self.__year}, {self.name}, {self.colour}, director: {self.director}, actors: {self.main_actor}, {self.main_actor2}, {self.main_actor3}'
 
 
 f1 = Movies('Baisers volés', 1968, 'colour', 'François Truffaut', 'Jean-Pierre Léaud')
@@ -79,10 +79,15 @@ f3 = Movies('La Haine', 1995, 'black&white', 'Mathieu Kassovitz', 'Vincent Casse
 
 if __name__ == "__main__":
 
-    Movies.main_actor4 = "-"                                        # AttributeError
+    Movies.main_actor4 = "-"                                        #
     print(Movies.main_actor4)                                       # -
-#    f3 = Movies('La Haine', 1995, 'black&white', 'Mathieu Kassovitz', 'Vincent Cassel', 'Saïd Taghmaoui', 'Hubert Kounde', 'bibi')
+#    f4 = Movies('La Haine', 1995, 'black&white', 'Mathieu Kassovitz', 'Vincent Cassel', 'Saïd Taghmaoui', 'Hubert Kounde', 'bibi')
 # TypeError
+    f3.main_actor3 = 'H. Koundé'
+    f3.__year = 2000
+# 1995, La Haine, black&white, director: Mathieu Kassovitz, actors: Vincent Cassel, Saïd Taghmaoui, H. Koundé
+    f3._Movies__year = 2000
+# 2000, La Haine, black&white, director: Mathieu Kassovitz, actors: Vincent Cassel, Saïd Taghmaoui, H. Koundé
 #    print(f3.func())
 #    print(Movies.__doc__)                                           # film library...
 #    help(Movies)                                                    # film library...
@@ -94,13 +99,12 @@ if __name__ == "__main__":
 #    print(Movies)
 #    print(Movies('year', 'c', 'director', 'main_actor', 'name'))
 #    print(f3.main_actor3)
-#    f3.main_actor3 = 'Hubert Koundé'
 #    del f3.main_actor3
 #    del f3
-#    print(f3.func())
 #    print(Movies.func(f3))
 #    print(f1.func())
 #    print(dir(f1))
 #    print(f3.colour)
 #    print(dir(Movies))
 #    print(type(f1))
+    print(f3.func())
