@@ -72,6 +72,8 @@ class Movies:
         """
         return f'{self.__year}, {self.name}, {self.colour}, director: {self.director}, actors: {self.main_actor}, {self.main_actor2}, {self.main_actor3}'
 
+    def __repr__(self):
+        return f'{self.__year}, {self.name}, {self.colour}, director: {self.director}, actors: {self.main_actor}, {self.main_actor2}, {self.main_actor3}'
 
 f1 = Movies('Baisers volés', 1968, 'colour', 'François Truffaut', 'Jean-Pierre Léaud')
 f2 = Movies('Het verloren paradijs', 1978, 'colour', 'Harry Kümel', 'Hugo Van Den Berghe', 'Willeke van Ammelrooy')
@@ -88,23 +90,6 @@ if __name__ == "__main__":
 # 1995, La Haine, black&white, director: Mathieu Kassovitz, actors: Vincent Cassel, Saïd Taghmaoui, H. Koundé
     f3._Movies__year = 2000
 # 2000, La Haine, black&white, director: Mathieu Kassovitz, actors: Vincent Cassel, Saïd Taghmaoui, H. Koundé
-#    print(f3.func())
-#    print(Movies.__doc__)                                           # film library...
-#    help(Movies)                                                    # film library...
-#    print(func.__doc__)                                             # NameError
-#    print(f2.director)
-#    print(f3.colour)
-#    print(f2.main_actor3)
-#    print(f2.main_actor2)
-#    print(Movies)
-#    print(Movies('year', 'c', 'director', 'main_actor', 'name'))
-#    print(f3.main_actor3)
-#    del f3.main_actor3
-#    del f3
-#    print(Movies.func(f3))
-#    print(f1.func())
-#    print(dir(f1))
-#    print(f3.colour)
-#    print(dir(Movies))
-#    print(type(f1))
+#    movie_copy = eval(repr(f3))
+#    print(movie_copy)
     print(f3.func())
