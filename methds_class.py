@@ -1,8 +1,3 @@
-# Метод __repr__ вызывается стандартной функцией repr и возвращает строку,
-# которая является представлением объекта в формате инициализации.
-# Этот метод может быть также полезен, если необходимо вывести информацию об объектах,
-# когда они являются элементами коллекции.
-
 #Методы для операций сравнения:
 #    __lt__(self, other) — <;
 #    __le__(self, other) — <=;
@@ -62,8 +57,6 @@
 #    __iand__(self, other) — self &= other;
 #    __ixor__(self, other) — self ^= other;
 #    __ior__(self, other) — self |= other.
-
-
 class Movies:
     """
     film library
@@ -146,7 +139,6 @@ f2 = Movies('Het verloren paradijs', 1978, 'colour', 'Harry Kümel', 'Hugo Van D
 f3 = Movies('La Haine', 1995, 'black&white', 'Mathieu Kassovitz', 'Vincent Cassel', 'Saïd Taghmaoui', 'Hubert Kounde')
 
 if __name__ == "__main__":
-
     Movies.main_actor4 = "-"                                        #
     print(Movies.main_actor4)                                       # -
 #    f4 = Movies('La Haine', 1995, 'black&white', 'Mathieu Kassovitz', 'Vincent Cassel', 'Saïd Taghmaoui', 'Hubert Kounde', 'bibi')
@@ -160,62 +152,6 @@ if __name__ == "__main__":
     print(movie_copy)
 # 2000, La Haine, black&white, director: Mathieu Kassovitz, actors: Vincent Cassel, Saïd Taghmaoui, H. Koundé
     print(f3.func())
-
-
-class Pencil:
-
-    def __init__(self, color="серый"):
-        self.color = color
-
-    def draw_picture(self):
-        return f"Нарисован рисунок цветом '{self.color}'."
-
-
-class Pen(Pencil):
-
-    def sign_document(self):
-        if self.color not in ("синий", "чёрный", "фиолетовый"):
-            return f"Ручкой цвета '{self.color}' нельзя подписать документ."
-        return f"Подписан документ."
-
-
-blue_pen = Pen(color="синий")
-print(blue_pen.draw_picture())
-print(blue_pen.sign_document())
-red_pen = Pen(color="красный")
-print(red_pen.draw_picture())
-print(red_pen.sign_document())
-
-
-class Pencil:
-
-    def __init__(self, color="серый"):
-        self.color = color
-
-    def draw_picture(self):
-        return f"Нарисован рисунок цветом '{self.color}'."
-
-
-class Pen(Pencil):
-
-    def __init__(self, color, pen_type):
-        super().__init__(color=color)
-        self.pen_type = pen_type
-
-    def sign_document(self):
-        if self.color not in ("синий", "чёрный", "фиолетовый"):
-            return f"Ручкой цвета '{self.color}' нельзя подписать документ."
-        elif self.pen_type == "гелевая":
-            return f"Ручкой типа '{self.pen_type}' нельзя подписать документ."
-        return f"Подписан документ."
-
-
-blue_ball_pen = Pen(color="синий", pen_type="шариковая")
-print(blue_ball_pen.draw_picture())
-print(blue_ball_pen.sign_document())
-blue_gel_pen = Pen(color="синий", pen_type="гелевая")
-print(blue_gel_pen.draw_picture())
-print(blue_gel_pen.sign_document())
 
 
 class Car:
