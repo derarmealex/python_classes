@@ -57,6 +57,16 @@
 #    __iand__(self, other) — self &= other;
 #    __ixor__(self, other) — self ^= other;
 #    __ior__(self, other) — self |= other.
+
+class Angels:
+    name = "Spirith"
+    age = 500
+
+
+class Daemons(Angels):
+    pass
+
+
 class Movies:
     """
     film library
@@ -236,21 +246,22 @@ class ElectricCar(Car):
         return new_car
 
 
-electric_car = ElectricCar(color="white", consumption=15, bat_capacity=90)
-print(electric_car.start_engine())
-print(electric_car.drive(100))
-print(electric_car)
-electric_car = ElectricCar(color="белый", consumption=15, bat_capacity=90)
-print(electric_car)
-print(repr(electric_car))
-electric_car_1 = ElectricCar(color="чёрный", consumption=17, bat_capacity=80)
-print([electric_car, electric_car_1])
-electric_car.start_engine()
-electric_car_1.start_engine()
-electric_car.drive(300)
-electric_car_1.drive(100)
-new_electric_car = electric_car + electric_car_1
-print(new_electric_car)
+if __name__ == "__main__":
+    electric_car = ElectricCar(color="white", consumption=15, bat_capacity=90)
+    print(electric_car.start_engine())
+    print(electric_car.drive(100))
+    print(electric_car)
+    electric_car = ElectricCar(color="белый", consumption=15, bat_capacity=90)
+    print(electric_car)
+    print(repr(electric_car))
+    electric_car_1 = ElectricCar(color="чёрный", consumption=17, bat_capacity=80)
+    print([electric_car, electric_car_1])
+    electric_car.start_engine()
+    electric_car_1.start_engine()
+    electric_car.drive(300)
+    electric_car_1.drive(100)
+    new_electric_car = electric_car + electric_car_1
+    print(new_electric_car)
 
 
 class A:
@@ -272,8 +283,9 @@ class A:
         return f"value: {self.value}."
 
 
-a = A()
-print(a + 1)
-print(1 + a)
-a += 1
-print(a)
+if __name__ == "__main__":
+    a = A()
+    print(a + 1)
+    print(1 + a)
+    a += 1
+    print(a)
