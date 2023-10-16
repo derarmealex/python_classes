@@ -11,8 +11,6 @@ class Extract:
         extract all values from immersed dictionary
         as name (code, id) and pair login, password
     """
-    dct = None
-
     def vals_dct_in_dct(self, dct):
         items = dct.items()
         for item in items:

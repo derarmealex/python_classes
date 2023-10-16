@@ -12,19 +12,19 @@ class GenFindNum:
     Methods
     ---------------------------------------------
     find_prime():
-        extract prime numbers from given sequence
+        extracts prime numbers from given sequence
     find_odd():
-        extract odd numbers from given sequence
+        extracts odd numbers from given sequence
     find_even():
-        extract even numbers from given sequence
+        extracts even numbers from given sequence
     """
-    lst = None
+    __slots__ = ["lst"]
 
     def __init__(self, lst):
-        self.__lst = lst
+        self.lst = lst
 
     def find_prime(self):
-        for num in self.__lst:
+        for num in self.lst:
             if num > 1:
                 ctr_num = 2
                 while ctr_num < num:
@@ -38,11 +38,11 @@ class GenFindNum:
                 continue
 
     def find_odd(self):
-        for num in self.__lst:
+        for num in self.lst:
             if num % 2 != 0:
                 yield num
 
     def find_even(self):
-        for num in self.__lst:
+        for num in self.lst:
             if num % 2 == 0:
                 yield num

@@ -4,19 +4,16 @@ class LoginCtr:
     as pair name, password
     ...
     Methods
-    ----------------------------------------------
+    ------------------------------------------------
     __init__():
-        retrieves user log-in data to control
+        retrieves user's log-in data to control
     return_input_try():
-        returns user login and password as entered
+        returns user's login and password as entered
     search_matches():
         takes log-in data as pair name, password
         from user and seeks for matching pair
         in internal login database
     """
-    login = None
-    password = None
-
     __slots__ = ["__login", "__password"]
 
     def __init__(self, login, password):

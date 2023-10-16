@@ -6,14 +6,10 @@ class Storage:
     Methods:
     -------------------------------------------------
     safe_data():
-        takes user's name and log-in data, and stores
+        takes user's name, log-in data and stores
         them as dictionary:
         {'Name': {'Login': "x", 'Password': "y"}}
     """
-    login = None
-    password = None
-    name = None
-
     __slots__ = ["__name", "__login", "__password"]
 
     def __init__(self, name, login, password):
@@ -28,7 +24,7 @@ class Storage:
         name["Password"] = self.__password
         login_database[self.__name] = name
 
-    def database(self):
+    def database():
         return login_database
 
     def __str__(self):

@@ -6,5 +6,5 @@ import load_unload
 load_unload = load_unload.LoadUnload()
 tatra = truck_parking.TruckParking("Tatra", 3000)
 
-load = load_unload.load(tatra)
-unload = load_unload.unload(load)
+load_tatra = load_unload.load(tatra)
+unload_tatra = load_unload.unload(load_tatra)

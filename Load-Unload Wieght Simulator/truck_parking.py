@@ -3,16 +3,15 @@ class TruckParking:
     Truck parking
     ...
     Methods
-    --------------------------------------------------
+    ---------------------------------------------------
     __init__():
-        retrieve truck model with data of its capacity
+        retrieves truck model with data of its capacity
     truck_info():
-        return capacity of truck
+        returns capacity of truck
     go_load():
-        send truck to loading
+        sends truck to loading
     """
-    model = None
-    car_capacity = 0
+    __slots__ = ["model", "car_capacity"]
 
     def __init__(self, model, car_capacity):
         self.model = model

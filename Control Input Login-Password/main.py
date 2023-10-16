@@ -12,6 +12,10 @@ extract = extract_dict.Extract()
 user1 = storage("Radagast", "brown", "123")
 user2 = storage("Gandalf", "grey", "456")
 user3 = storage("Saruman", "white", "789")
+#print(stored_logins.Storage.database())
+# {'Radagast': {'Login': 'brown', 'Password': '123'},
+# 'Gandalf': {'Login': 'grey', 'Password': '456'},
+# 'Saruman': {'Login': 'white', 'Password': '789'}}
 
 input_try = 3
 control_result = ""
