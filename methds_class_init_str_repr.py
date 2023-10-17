@@ -29,9 +29,12 @@ class Hui:
     lenght = 0
     colour = ""
 
-    def __init__(self, lenght, colour):
+    def __init__(self, lenght=0, colour=""):
         self.lenght = lenght
         self.colour = colour
+
+    def __del__(self):
+        print("Destructor called")
 
     def pokazhi_huy_speredi(self):
         return self.lenght, self.colour
@@ -51,15 +54,13 @@ class Hui:
 
 if __name__ == "__main__":
     import methds_class_init_str_repr
-
-    huyci = methds_class_init_str_repr.Hui
-    huy1 = huyci(20, "black")
+    huy1 = Hui(20, "black")
     print(huy1)
     # Vot huec: 20 black
-    print(huyci.lenght)
+    print(Hui.lenght)
     # 0
-    huyci.lenght = 10
-    print(huyci.lenght)
+    Hui.lenght = 10
+    print(Hui.lenght)
     # 10
     print(huy1.pokazhi_huy_speredi())
     # return representation of object as tuple
