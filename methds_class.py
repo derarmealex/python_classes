@@ -1,4 +1,4 @@
-#Методы для операций сравнения:
+# Методы для операций сравнения:
 #    __lt__(self, other) — <;
 #    __le__(self, other) — <=;
 #    __eq__(self, other) — ==;
@@ -6,16 +6,16 @@
 #    __gt__(self, other) — >;
 #    __ge__(self, other) — >=.
 
-#Метод __call__(arg1, arg2, ...) вызывается, когда сам объект вызывается как функция с аргументами.
+# Метод __call__(arg1, arg2, ...) вызывается, когда сам объект вызывается как функция с аргументами.
 
-#Методы для работы с объектом как с коллекцией:
+# Методы для работы с объектом как с коллекцией:
 #    __getitem__(self, key) используется для получения элемента коллекции по ключу self[key];
 #    __setitem__(self, key, value) используется для записи значения по ключу self[key] = value;
 #    __delitem__(self, key) используется для удаления ключа и соответствующего ему значения;
 #    __len__(self) вызывается стандартной функцией len;
 #    __contains__(self, item) вызывается при проверке принадлежности значения item объекту-коллекции self с помощью оператора in.
 
-#Математические операции:
+# Математические операции:
 #    __add__(self, other) — self + other;
 #    __sub__(self, other) — self - other;
 #    __mul__(self, other) — self * other;
@@ -69,8 +69,6 @@ class Angels:
 
 
 class Daemons(Angels):
-    pass
-
     def __str__(self):
         return f"Wish I had a daemon {self.name}"
 
@@ -221,6 +219,7 @@ class ElectricCar(Car):
                f"{self.consumption}, " \
                f"{self.bat_capacity}, " \
                f"{self.mileage})"
+
     def __add__(self, other):
         new_car = ElectricCar(self.color,
                               self.consumption + other.consumption,
