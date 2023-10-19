@@ -253,13 +253,14 @@ class A:
         self.value = 10
 
     def __add__(self, other):
-        return "Выполняется метод __add__."
+        return "__add__ executed"
 
     def __radd__(self, other):
-        return "Выполняется метод __radd__."
+        return "__radd__ executed"
 
     def __iadd__(self, other):
         self.value += other
+        print("__iadd__ executed")
         return self
 
     def __str__(self):
