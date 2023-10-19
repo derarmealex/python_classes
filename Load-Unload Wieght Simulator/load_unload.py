@@ -1,14 +1,14 @@
 class LoadUnload:
     """
-    Simulates loading/unloading goods on/from truck
+    Simulate loading/unloading goods on/from truck
     ...
     Methods
-    ------------------------------------------------
+    -----------------------------------------------
     load():
-        controls if weight of goods you want to load
+        control if weight of goods you want to load
         isn't too big for this car
     unload():
-        controls if weight of goods on your car
+        control if weight of goods on your car
         is not less than you want to unload
     """
     def load(self, truck):
@@ -25,7 +25,7 @@ class LoadUnload:
                     weight_ctr -= weight_in
                 else:
                     print("\n\tIt's too heavy for this car\n")
-        print("\n\tThere's", self.truck.car_capacity - weight_ctr, "kg on car. Good drive!")
+        print("\n\tFully loaded:", self.truck.car_capacity - weight_ctr, "kg. Good drive!")
         return self.truck.car_capacity - weight_ctr
 
     def unload(self, load):

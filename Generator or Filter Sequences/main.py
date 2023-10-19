@@ -18,6 +18,7 @@ seq = gen_find_num.GenFindNum(range(1, 99))
 prime = seq.find_prime()
 #print(list(prime))
 # [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+
 seq = gen_find_num.GenFindNum(prime)
 prime_odd = seq.find_odd()
 print(list(prime_odd))

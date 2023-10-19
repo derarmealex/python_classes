@@ -11,12 +11,12 @@ class GenFindNum:
     ...
     Methods
     ---------------------------------------------
-    find_prime():
-        extracts prime numbers from given sequence
-    find_odd():
-        extracts odd numbers from given sequence
-    find_even():
-        extracts even numbers from given sequence
+    find_prime(seq):
+        extract prime numbers from given sequence
+    find_odd(seq):
+        extract odd numbers from given sequence
+    find_even(seq):
+        extract even numbers from given sequence
     """
     __slots__ = ["lst"]
 
