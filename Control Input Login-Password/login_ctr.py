@@ -17,12 +17,12 @@ class LoginCtr:
 
     def input_try(self):
         self.input_tries = 3
-        self.log_pas = ""
-        while not self.log_pas and self.input_tries > 0:
+        self.__log_pas = ""
+        while not self.__log_pas and self.input_tries > 0:
             self.__login = input("Enter your username: ")
             self.__password = input("Enter your password: ")
             LoginCtr.search_matches(self)
-        if self.log_pas: print("\n\tWelcome to app, " + self.log_pas[0] + "! You can go on...")
+        if self.__log_pas: print("\n\tWelcome to app, " + self.__log_pas[0] + "! You can go on...")
         else: print("Just 3 tries to connect per day, unfortunately. See ya tomorrow. (:")
 
 
@@ -32,11 +32,11 @@ class LoginCtr:
         extracted_logins = list(extract_dict.Extract.vals_dct_in_dct(self, login_database))
         for log_pas in extracted_logins:
             if self.__login in log_pas[1] and self.__password in log_pas[1]:
-                self.log_pas = log_pas
+                self.__log_pas = log_pas
                 break
         else:
             print("\n\tUsername or password isn't OK!\n")
             self.input_tries -= 1
 
     def __str__(self):
-        return f"{self.log_pas}"
+        return f"{self.__log_pas}"
