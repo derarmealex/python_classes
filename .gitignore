@@ -6,9 +6,12 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+class1.py
+class2.py
 draft1.py
 draft2.py
 draft3.py
+extract_dict.py
+input_name_pas.py
 main_.py
-class1.py
-class2.py
+stored_logins_main.py
